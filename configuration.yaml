@@ -1,0 +1,117 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 30.244849
+  longitude: -97.777454
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 631
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: UTC
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+ios:
+
+konnected:
+  access_token: !secret konnected_access_token
+  api_host: http://192.168.1.140:8123
+  devices:
+    - id: fe718a
+      binary_sensors:
+        - zone: 1
+          type: window
+          name: '1f_wind_bck'
+        - zone: 2
+          type: door
+          name: '1f_door_frn'
+        - zone: 3
+          type: door
+          name: '1f_door_bck'
+        - zone: 4
+          type: door
+          name: 'unknown04'
+        - zone: 5
+          type: door
+          name: 'unknown05'
+        - zone: 6
+          type: door
+          name: '2f_door_bck'
+    - id: 18fbeb
+      binary_sensors:
+        - zone: 1
+          type: motion
+          name: 'motion'
+        - zone: 3
+          type: door
+          name: 'unknown07'
+      switches:
+        - zone: out
+          name: siren1
+
+ecobee:
+  api_key: !secret ecobee_api_key
+  hold_temp: false
+
+http:
+  base_url: bozarth.duckdns.org
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  api_password: !secret http_password
+  # Secrets are defined in the file secrets.yaml
+  # api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor:
+  - platform: yr
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
