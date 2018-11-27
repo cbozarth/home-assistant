@@ -1,0 +1,55 @@
+media_player.roku_13a19f116386:
+  config_entry_id:
+  name:
+  platform: roku
+  unique_id: 13A19F116386
+media_player.chrome:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: svjfa2pvlcerijjjm0mx7iut
+sensor.iphone_battery_state:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: state_iphone
+sensor.iphone_battery_level:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: level_iphone
+media_player.unnamed_device:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 4aid00m083r9rihz0xeojghf
+media_player.roku_2_xs__13a19f116386:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 38579fa37856e712918d04c0060c7ead
+media_player.roku_yh0044086252:
+  config_entry_id:
+  name:
+  platform: roku
+  unique_id: YH0044086252
+media_player.roku_streaming_stick:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: 7b2344bca535f09bb3f639141119d93c
+media_player.chrome_2:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: fnkfvgghrrsv1hdu9t40via0
+media_player.kfdowi:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: f0c4fdbf97879df2-com-plexapp-android
+media_player.chrome_3:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: z0baoahh7egw42r8d5tgf1f9
